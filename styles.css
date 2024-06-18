@@ -101,7 +101,6 @@ body {
     }
 }
 
-/* Stars and Planets Styles */
 .stars {
     position: fixed;
     top: 0;
@@ -132,6 +131,14 @@ body {
     border-radius: 50%;
     top: 20%;
     left: 70%;
+}
+
+/* Move the planet on smaller screens */
+@media (max-width: 480px) {
+    .planet {
+        top: 30%; /* Adjust as needed */
+        left: 50%; /* Adjust as needed */
+    }
 }
 
 .sun {
