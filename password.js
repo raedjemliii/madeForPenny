@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.getElementById('remember-me').checked) {
                 localStorage.setItem('password', password);
             }
-            window.location.href = 'index.html';
+            window.location.href = 'index2.html';
         } else {
             alert('Incorrect password');
         }
     });
 
     if (localStorage.getItem('password') === 'penny') {
-        window.location.href = 'index.html';
+        window.location.href = 'index2.html';
     }
 });
 
