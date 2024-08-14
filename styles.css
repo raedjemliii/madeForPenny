@@ -1,0 +1,293 @@
+/* Global Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92, #4b0082, #4b0082, #fbc540);
+    background-size: 100% 200%;
+    color: #fff;
+    transition: background-position 0.1s ease-out, background 1s ease;
+    overflow-x: hidden;
+}
+
+* {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none; /* For modern browsers */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For IE/Edge */
+}
+
+
+
+.canx{
+    display: block;
+    position: relative;
+    top: 500px;
+}
+
+/*stars*/
+/*hide the moving stars in phone*/
+@media only screen and (max-width: 768px) {
+    .canx{
+        position: relative;
+        top: -30px;
+    }
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.header.hidden {
+    opacity: 0;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Styles */
+.nav a {
+    font-family: 'Poppins', sans-serif;
+    color: #b3b3b3;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Content Styles */
+.content {
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    animation: fadeIn 2s ease forwards;
+}
+
+.spacer {
+    height: 800px;
+}
+
+.spacerr {
+    height: 350px;
+}
+
+/* Responsive Text and Element Sizes */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2em;
+    }
+    .content h2 {
+        font-size: 1.2em;
+    }
+    .nav a {
+        margin-left: 10px;
+    }
+    .spacer {
+        height: 400px;
+    }
+    .spacerr {
+        height: 175px;
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 2s infinite;
+}
+
+
+.sun {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #fff44f, #ffdd44);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgba(255, 221, 68, 0.5);
+    top: -60px; /* Position the sun above the sentence initially */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.moon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #fff, #ccc);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 1s ease, left 1s ease;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+}
+
+.moon-rotate {
+    animation: moon-rotate 5s linear infinite;
+}
+
+@keyframes moon-rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Big Sun Styles */
+.big-sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #fff44f, #ffdd44);
+    border-radius: 50%;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    z-index: -1;
+    transition: bottom 1s ease-out, transform 1s ease-out;
+}
+
+.big-sun-visible {
+    transform: translateX(-50%) scale(1);
+    bottom: 20%;
+}
+
+/* Text Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.rising-sun {
+    position: absolute;
+    width: 70px; /* Bigger than the moon */
+    height: 70px;
+    background: radial-gradient(circle, #fff44f, #ffdd44);
+    border-radius: 50%;
+    top: 50%;
+    left: -100px; /* Start from outside the view */
+    transform: translateY(-50%);
+    transition: left 2s ease-out, top 2s ease-out, opacity 2s ease-out;
+    opacity: 0;
+    box-shadow: 0 0 50px 20px rgba(255, 221, 68, 0.5); /* Shining effect */
+}
+
+.rising-sun-visible {
+    left: 50%;
+    opacity: 1;
+}
+
+.rising-sun-follow {
+    position: fixed;
+    left: auto;
+}
+
+/* Sentence Styles */
+.sentence {
+    font-size: 1.5em; /* Increased font size */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+    background: linear-gradient(to right, #ffffff, #ffdd44, #ffffff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shining 2s linear infinite;
+}
+
+@keyframes shining {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.sentence.shining {
+    animation: shining 2s linear infinite;
+}
+
+/* Add these styles to your existing CSS */
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000428; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #FFD700, #4b0082, #004e92);
+    border-radius: 6px;
+    border: 3px solid #000428; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #4b0082, #FFD700, #004e92);
+}
+
+
+/* Hamburger Menu Styles */

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "three": "^0.166.1"
+  },
+  "devDependencies": {
+    "vite": "^5.3.4"
+  },
+  "name": "1yearan",
+  "version": "1.0.0",
+  "main": "password.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

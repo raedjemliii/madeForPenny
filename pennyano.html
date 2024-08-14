@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pennyano</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Abel'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.css'><link rel="stylesheet" href="pennyano.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="machine-bg">
+    <div class="player"></div>
+    <div class="controls">
+      <div>
+        <div id="temperature" class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0.2" aria-valuemax="2" aria-valuenow="1.1"
+             aria-label="Select temperature">
+          <div class="mdc-slider__track-container">
+            <div class="mdc-slider__track"></div>
+          </div>
+          <div class="mdc-slider__thumb-container">
+            <svg class="mdc-slider__thumb" width="21" height="21">
+              <circle cx="10.5" cy="10.5" r="7.875"></circle>
+            </svg>
+            <div class="mdc-slider__focus-ring"></div>
+          </div>
+        </div>
+        Temperature
+      </div>
+    </div>
+  </div>
+  <div class="human-bg">
+    <div class="player"></div>
+    <div class="controls">
+      <div class="midi-not-supported"></div>
+      <div class="midi-supported-no-inputs" style="display: none"></div>
+      <div class="midi-supported-with-inputs" style="display: none">
+        <div class="mdc-select mdc-select--theme-light">
+          <select id="midi-inputs" class="mdc-select__surface" role="presentation"></select>
+          <div class="mdc-select__bottom-line"></div>
+        </div>
+        </div>
+      <p>Hold the key and the "Penny"ano will generate the rest...<br>using artificial intelligence to generate the rest of the melody</p>
+      
+    
+    </div>
+  </div>
+  <div class="keyboard">
+  </div>
+  <div class="loading">
+    Loading...
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/tone@0.12.62/build/Tone.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@magenta/music@0.0.8/dist/magentamusic.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/web-animations-js@2.3.1/web-animations.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/webmidi@2.0.0/webmidi.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/audiokeys@0.1.1/dist/audiokeys.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/startaudiocontext@1.2.1/StartAudioContext.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/babel-regenerator-runtime@6.5.0/runtime.min.js'></script>
+<script src='https://cdn.rawgit.com/danigb/tonal/9b6b1663/dist/tonal.min.js'></script><script  src="pennyano.js"></script>
+
+</body>
+</html>

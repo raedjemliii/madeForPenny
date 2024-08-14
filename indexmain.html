@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>From Raed</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./countdowntime.css">
+    <link rel="stylesheet" href="./textmovingvariable.css">
+</head>
+<body>
+    <div class="header">
+        <audio id="background-music" src="Love Songs (Bonus).mp3"></audio>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon"></div>
+        </div>
+        <div id="sidebar" class="closed">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="mybaby.jpeg" alt="Image">
+                </div>
+                <div class="name-container">
+                    <span class="logo-text">Mrs Penelophy</span>
+                </div>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <!--games-->
+                    <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24">
+                        <circle cx="53.5" cy="53.5" r="31.5" stroke="#ffffff" stroke-width="12"></circle>
+                        <circle cx="53.5" cy="138.5" r="31.5" stroke="#ffffff" stroke-width="12"></circle>
+                        <circle cx="138.5" cy="138.5" r="31.5" stroke="#ffffff" stroke-width="12"></circle>
+                        <path stroke="#ffffff" stroke-linecap="round" stroke-width="12" d="m113 28 25.5 25.5M164 79l-25.5-25.5m0 0L164 28m-25.5 25.5L113 79"></path>
+                    </svg>
+                    <span class="menu-text" id="games-button">Games</span>
+                </li>
+
+                <li class="menu-item">
+                    <svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M490.667,0H21.333C9.551,0,0,9.551,0,21.333v341.333C0,374.449,9.551,384,21.333,384h64h85.333H192v21.333h-42.667 c-11.782,0-21.333,9.551-21.333,21.333v64c0,11.782,9.551,21.333,21.333,21.333h213.333c11.782,0,21.333-9.551,21.333-21.333v-64 c0-11.782-9.551-21.333-21.333-21.333H320V384h106.667h64c11.782,0,21.333-9.551,21.333-21.333V21.333 C512,9.551,502.449,0,490.667,0z M149.333,341.333h-42.667v-42.667h42.667V341.333z M298.667,448h42.667v21.333H170.667V448 h42.667c11.782,0,21.333-9.551,21.333-21.333V384h42.667v42.667C277.333,438.449,286.885,448,298.667,448z M298.667,341.333 h-85.333H192v-42.667h25.92h140.181h47.232v42.667H298.667z M256,138.667c0-17.679,14.321-32,32-32s32,14.321,32,32 s-14.321,32-32,32S256,156.346,256,138.667z M288,213.333c30.124,0,53.333,19.893,53.333,42.667H234.667 C234.667,233.227,257.876,213.333,288,213.333z M469.333,341.333H448v-64c0-11.782-9.551-21.333-21.333-21.333H384 c0-28.607-15.555-53.464-39.228-68.858c11.149-13.045,17.895-29.966,17.895-48.475C362.667,97.423,329.243,64,288,64 s-74.667,33.423-74.667,74.667c0,18.509,6.746,35.43,17.895,48.475C207.555,202.536,192,227.393,192,256h-21.333H85.333 C73.551,256,64,265.551,64,277.333v64H42.667V42.667h426.667V341.333z"></path> <path d="M106.667,128H128c11.782,0,21.333-9.551,21.333-21.333c0-11.782-9.551-21.333-21.333-21.333h-21.333 c-11.782,0-21.333,9.551-21.333,21.333C85.333,118.449,94.885,128,106.667,128z"></path> </g> </g> </g> </g></svg>
+                    <span class="menu-text" id="realtimegames">RealTime Games</span>
+                </li>
+
+                <li class="menu-item">
+                    <svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.004 512.004" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M512.005,155.828c0-12.294-9.967-22.261-22.261-22.261H339.874c7.692-13.31,22.065-22.261,38.563-22.261 c49.203,0,89.044-39.841,89.044-89.043c0-12.294-9.967-22.261-22.261-22.261c-12.294,0-22.261,9.967-22.261,22.261 c0,24.614-19.908,44.522-44.522,44.522c-41.515,0-76.365,28.364-86.242,66.783H22.265c-12.294,0-22.261,9.966-22.261,22.261 v155.826H0v159.9c0,22.334,18.114,40.448,40.448,40.448h431.104c22.334,0,40.448-18.114,40.448-40.448V334.091 c0-0.059,0.004-0.117,0.004-0.176V155.828z M44.526,178.089h422.957v133.565H44.526V178.089z M467.478,467.48H44.522V356.176 h22.263v66.783c0,12.294,9.967,22.261,22.261,22.261c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783 c0,12.294,9.966,22.261,22.261,22.261c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783 c0,12.294,9.967,22.261,22.261,22.261s22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.967,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.967,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.966,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.259V467.48z"></path> <path d="M111.307,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S99.012,267.133,111.307,267.133z"></path> <path d="M200.35,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261H200.35 c-12.294,0-22.261,9.967-22.261,22.261S188.056,267.133,200.35,267.133z"></path> <path d="M289.394,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.966-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S277.099,267.133,289.394,267.133z"></path> <path d="M378.437,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S366.143,267.133,378.437,267.133z"></path> </g> </g> </g> </g></svg>
+                    <span class="menu-text" id="aimusic">AImusic instruments</span>
+                </li>
+
+                <li class="menu-item">
+                    <svg fill="#FFD700" height="200px" width="200px" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                        <style>
+                            #Layer_2 {
+                                transition: filter 0.3s ease;
+                            }
+                            #Layer_2:hover {
+                                filter: drop-shadow(0px 0px 10px #FFD700) drop-shadow(0px 0px 20px #FFD700);
+                            }
+                        </style>
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g>
+                                    <path d="M498.095,198.122c0-25.763-9.68-50.313-27.257-69.131c-13.197-14.129-29.915-24.039-48.274-28.848 c0.253-2.749,0.397-5.521,0.397-8.313C422.962,41.194,381.768,0,331.133,0C300.099,0,272.631,15.49,256,39.129 C239.369,15.49,211.901,0,180.867,0c-50.635,0-91.828,41.194-91.828,91.828c0,2.794,0.145,5.565,0.397,8.313 c-18.359,4.808-35.075,14.719-48.274,28.848c-17.578,18.819-27.257,43.37-27.257,69.132c0,21.486,6.731,41.427,18.185,57.837 c-11.804,16.895-18.185,37.001-18.185,57.919c0,46.95,32.11,86.538,75.522,97.967c-0.249,2.761-0.39,5.537-0.39,8.327 c0,50.635,41.194,91.828,91.828,91.828c31.035,0,58.503-15.49,75.133-39.129C272.631,496.51,300.099,512,331.133,512 c50.635,0,91.828-41.194,91.828-91.828c0-2.788-0.14-5.565-0.39-8.327c43.412-11.429,75.522-51.016,75.522-97.967 c0-20.919-6.382-41.025-18.185-57.919C491.365,239.549,498.095,219.608,498.095,198.122z M239.304,343.088v77.084 c0,32.221-26.216,58.437-58.437,58.437c-32.223,0-58.437-26.216-58.437-58.437c0-1.771,0.088-3.532,0.245-5.284 c25.807-1.92,50.123-13.714,67.616-33.029l-24.749-22.417c-12.857,14.195-31.206,22.337-50.343,22.337 c-37.442,0-67.902-30.461-67.902-67.901c0-11.892,3.075-23.392,8.834-33.519c16.639,11.985,37.042,19.055,59.068,19.055v-33.391 c-37.442,0-67.902-30.461-67.902-67.901c0-31.399,21.722-58.325,51.228-65.815c10.151,20.567,27.843,37.177,50.093,45.523 l11.728-31.264c-22.678-8.507-37.916-30.504-37.916-54.737c0-32.223,26.216-58.437,58.437-58.437s58.437,26.216,58.437,58.437 v77.084v23.211h-13.79v-23.211h-33.391v23.211h-23.211v33.391h23.211v13.79h-23.211v33.391h23.211v13.789h-23.211v33.391h23.211 v23.211h33.391v-23.211h13.79V343.088z M225.516,286.485v-60.969h60.969v60.969H225.516z M455.869,280.359 c5.759,10.128,8.834,21.628,8.834,33.519c0,37.442-30.461,67.901-67.902,67.901c-19.137,0-37.486-8.141-50.343-22.337 L321.71,381.86c17.494,19.314,41.809,31.107,67.616,33.029c0.157,1.751,0.245,3.513,0.245,5.284 c0,32.223-26.216,58.437-58.437,58.437s-58.438-26.214-58.438-58.437v-77.084v-23.211h13.789v23.211h33.391v-23.211h23.211 v-33.391h-23.211v-13.789h23.211v-33.391h-23.211v-13.79h23.211v-33.391h-23.211v-23.211h-33.391v23.211h-13.789v-23.211V91.828 c0-32.223,26.216-58.437,58.437-58.437s58.437,26.214,58.437,58.437c0,24.232-15.238,46.229-37.916,54.737l11.728,31.264 c22.251-8.347,39.942-24.957,50.094-45.523c29.506,7.491,51.228,34.416,51.228,65.815c0,37.441-30.461,67.901-67.902,67.901 v33.391C418.827,299.414,439.23,292.343,455.869,280.359z"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="menu-text" id="RazeName">Raze</span>                    
+                </li>
+                
+            </ul>
+            <div class="bottom-bar">
+                <div style="display: flex; align-items: center;">
+                    <div class="status-indicator"></div>
+                    <span class="menu-text">Server is On</span>
+                </div>
+                <i data-feather="chevron-left" class="chevron"></i>
+            </div>
+        </div>
+     
+        <div class="svg-container">
+            <div class="star" style="top: 10%; left: 90%; animation-duration: 1s;"></div>
+            <div class="star" style="top: 30%; left: 80%; animation-duration: 1.5s;"></div>
+            <div class="star" style="top: 50%; left: 70%; animation-duration: 2s;"></div>
+            <div class="star" style="top: 70%; left: 60%; animation-duration: 2.5s;"></div>
+            <div class="star" style="top: 90%; left: 50%; animation-duration: 3s;"></div>
+            <div class="planet" style="top: 20%; left: 20%;"></div>
+            <div class="planet" style="top: 50%; left: 40%; animation-duration: 20s;"></div>
+        </div>
+        
+    
+    </div>
+    <div class="content">
+        <div id="timer">
+            <div id="days"></div>
+            <div id="hours"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+          </div>
+          <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic"
+                            type="matrix"
+                            values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="spacer"></div>
+        <div id="moon-target-morning" class="sentence">Just know when your nights are getting darker...</div>
+        <div class="spacer"></div>
+        <div id="moon-target-night" class="sentence">I will be the moon in your dark nights.</div>
+        <div class="spacer"><canvas class="canx"></canvas></div>
+        <div id="sun-target" class="sentence">And when you wake up at the morning...</div>
+        <div class="spacer"></div>
+        <div id="sun-rise-sentence" class="sentence">I will be the sun in your beautiful morning.</div>
+        <div class="spacerr"></div>
+    </div>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./countdowntime.js"></script>
+    <script src="stats.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="star.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="./script.js"></script>
+    <script  src="./textmovingvariable.js"></script>
+    <script src="buttonsclickredirect.js"></script>
+</body>
+</html>

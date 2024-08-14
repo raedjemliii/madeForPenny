@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Session API Example</title>
+</head>
+<body>
+  <audio id="audio" controls>
+    <source src="Love Songs (Bonus).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Check if the Media Session API is supported
+    if ('mediaSession' in navigator) {
+      // Set metadata for the media session
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: 'Song Title',
+        artist: 'Artist Name',
+        album: 'Album Name',
+        artwork: [
+          { src: '261237470_600602891358100_112606782525616126_n-transformed.jpeg', sizes: '96x96', type: 'image/png' },
+          { src: 'path/to/album-art-128x128.png', sizes: '128x128', type: 'image/png' },
+          { src: 'path/to/album-art-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'path/to/album-art-256x256.png', sizes: '256x256', type: 'image/png' },
+          { src: 'path/to/album-art-384x384.png', sizes: '384x384', type: 'image/png' },
+          { src: 'path/to/album-art-512x512.png', sizes: '512x512', type: 'image/png' }
+        ]
+      });
+
+      // Handle play/pause actions
+      navigator.mediaSession.setActionHandler('play', () => {
+        document.getElementById('audio').play();
+      });
+      navigator.mediaSession.setActionHandler('pause', () => {
+        document.getElementById('audio').pause();
+      });
+
+      // Handle other media session actions (skip to next/previous track, seek, etc.)
+      navigator.mediaSession.setActionHandler('previoustrack', () => {
+        console.log('Previous track button clicked');
+      });
+      navigator.mediaSession.setActionHandler('nexttrack', () => {
+        console.log('Next track button clicked');
+      });
+    }
+  </script>
+</body>
+</html>
