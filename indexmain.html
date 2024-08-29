@@ -11,6 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./countdowntime.css">
     <link rel="stylesheet" href="./textmovingvariable.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "e5b30e27-bbd3-4b41-b4ae-460817242ede",
+      safari_web_id: "web.onesignal.auto.0919e572-6b9a-4fc1-8566-50f787b3e729",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 </head>
 <body>
     <div class="header">
@@ -36,7 +49,7 @@
                         <circle cx="138.5" cy="138.5" r="31.5" stroke="#ffffff" stroke-width="12"></circle>
                         <path stroke="#ffffff" stroke-linecap="round" stroke-width="12" d="m113 28 25.5 25.5M164 79l-25.5-25.5m0 0L164 28m-25.5 25.5L113 79"></path>
                     </svg>
-                    <span class="menu-text" id="games-button">Games</span>
+                    <span class="menu-text" id="games-button">Games </span>
                 </li>
 
                 <li class="menu-item">
@@ -46,7 +59,7 @@
 
                 <li class="menu-item">
                     <svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.004 512.004" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M512.005,155.828c0-12.294-9.967-22.261-22.261-22.261H339.874c7.692-13.31,22.065-22.261,38.563-22.261 c49.203,0,89.044-39.841,89.044-89.043c0-12.294-9.967-22.261-22.261-22.261c-12.294,0-22.261,9.967-22.261,22.261 c0,24.614-19.908,44.522-44.522,44.522c-41.515,0-76.365,28.364-86.242,66.783H22.265c-12.294,0-22.261,9.966-22.261,22.261 v155.826H0v159.9c0,22.334,18.114,40.448,40.448,40.448h431.104c22.334,0,40.448-18.114,40.448-40.448V334.091 c0-0.059,0.004-0.117,0.004-0.176V155.828z M44.526,178.089h422.957v133.565H44.526V178.089z M467.478,467.48H44.522V356.176 h22.263v66.783c0,12.294,9.967,22.261,22.261,22.261c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783 c0,12.294,9.966,22.261,22.261,22.261c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783 c0,12.294,9.967,22.261,22.261,22.261s22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.967,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.967,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.261v66.783c0,12.294,9.966,22.261,22.261,22.261 c12.294,0,22.261-9.967,22.261-22.261v-66.783h22.259V467.48z"></path> <path d="M111.307,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S99.012,267.133,111.307,267.133z"></path> <path d="M200.35,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261H200.35 c-12.294,0-22.261,9.967-22.261,22.261S188.056,267.133,200.35,267.133z"></path> <path d="M289.394,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.966-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S277.099,267.133,289.394,267.133z"></path> <path d="M378.437,267.133h22.261c12.294,0,22.261-9.967,22.261-22.261s-9.967-22.261-22.261-22.261h-22.261 c-12.294,0-22.261,9.967-22.261,22.261S366.143,267.133,378.437,267.133z"></path> </g> </g> </g> </g></svg>
-                    <span class="menu-text" id="aimusic">AImusic instruments</span>
+                    <span class="menu-text" id="aimusic">AImusic instruments </span>
                 </li>
 
                 <li class="menu-item">
@@ -122,12 +135,13 @@
         <div id="moon-target-morning" class="sentence">Just know when your nights are getting darker...</div>
         <div class="spacer"></div>
         <div id="moon-target-night" class="sentence">I will be the moon in your dark nights.</div>
-        <div class="spacer"><canvas class="canx"></canvas></div>
+        <div class="spacer"></div>
         <div id="sun-target" class="sentence">And when you wake up at the morning...</div>
         <div class="spacer"></div>
         <div id="sun-rise-sentence" class="sentence">I will be the sun in your beautiful morning.</div>
         <div class="spacerr"></div>
     </div>
+   
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./countdowntime.js"></script>
     <script src="stats.min.js"></script> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
