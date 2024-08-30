@@ -6,6 +6,15 @@
     <title>Website is locked</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="./password.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "e5b30e27-bbd3-4b41-b4ae-460817242ede",
+    });
+  });
+</script>
 </head>
 <body>
     <div class="password-container">
