@@ -11,13 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./countdowntime.css">
     <link rel="stylesheet" href="./textmovingvariable.css">
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
 <script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
       appId: "e5b30e27-bbd3-4b41-b4ae-460817242ede",
-      safari_web_id: "web.onesignal.auto.0919e572-6b9a-4fc1-8566-50f787b3e729",
       notifyButton: {
         enable: true,
       },
